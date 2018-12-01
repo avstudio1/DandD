@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<!-- Title Block -->
+
+<div class="jumbotron text-center">
+    <div class="row">
+        <h3>Terminal 3 - Stands Performance</h3>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <p> Flights </p>
+        </div>
+        <div class="col-sm-6">
+            <p> Stands </p>
+        </div>
+    </div>
+</div>
+
+<!-- Airport terminal detail, with stand list / stand map -->
+
+<div class="image-map-container">
+    <div class="row">
+        <div class="col-sm-12">
+                <img class="center-block" src="{% static 'images/ord_t3_450.png' %}" alt="" usemap="#image-map">
+            <div class="map-selector"></div>
+        </div>
+    </div>
+</div>
+
+<map name="image-map" id="image-map">
+    <area alt="" title="L1" href="L1" shape="rect" coords="287,166,303,175" />
+</map>
+
+<!-- Stand performance graphs -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+          <h3><span class="glyphicon glyphicon-plane"></span> Flights Data </h3>
+      </div>
+      
+      <div class="col-sm-6">
+          <h3><span class="glyphicon glyphicon-hdd"></span> Events Data </h3>
+      </div>
+</div>
+
+
+{% endblock %}

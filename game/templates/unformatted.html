@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<nav class="navbar navbar-custom">
+  <h5 class="text-center">{{ airportcode }} - Gate Performance</h5>
+</nav>
+<div class="container">
+{{ url }}
+<br> 
+</div>
+{{ performance.url }}
+<br>
+
+<small>{{ performance.url }}</small>
+{% endblock %}
