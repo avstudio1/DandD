@@ -1,5 +1,0 @@
-django
-gunicorn
-django-heroku
-requests
-dice = "2.4.0"
