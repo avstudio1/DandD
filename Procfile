@@ -1,1 +1,1 @@
-web: gunicorn dashtastic.wsgi --log-file -
+web: gunicorn DandD.wsgi --log-file -

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashtastic</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <style type="text/css">
+    .jumbotron {
+        background: #c6c6c6;
+        color: black;
+        padding-bottom: 80px
+    }
+    .jumbotron .btn-primary {
+        background: #c6c6c6;
+        border-color: #c6c6c6
+    }
+    .jumbotron .btn-primary:hover {
+        background: #c6c6c6
+    }
+    .jumbotron p {
+        color: #d9ccee;
+        max-width: 75%;
+        margin: 1em auto 2em
+    }
+    .navbar+.jumbotron {
+        margin-top: -20px
+    }
+    .jumbotron .lang-logo {
+        display: block;
+        background: #b01302;
+        border-radius: 50%;
+        overflow: hidden;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        border: 2px solid white
+    }
+    .jumbotron .lang-logo img {
+        max-width: 100%
+    }
+    .navbar-custom {
+    background-color: #706f6f;
+    color: white
+}
+    .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #008237;
+}
+.alert-info {
+    color: white;
+    background-color: #706f6f;
+    border-color: #c6c6c6;
+}
+    .text-left {
+    text-align: left;
+}
+    .text-right {
+    text-align: right;
+}
+    .text-center {
+    text-align: center;
+}
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-dark" style="background-color: #0a240a">
+    <a class="navbar-brand" href="/">
+      {% load staticfiles %}
+      <img src="{% static '/images/logo-color.jpg' %}" width="30" height="30" alt="">
+      D&#8239;&&#8239;D
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Contact Support</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+{% block content %}{% endblock %}
+</body>
+</html>
