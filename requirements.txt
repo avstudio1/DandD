@@ -1,0 +1,5 @@
+django
+gunicorn
+django-heroku
+requests
+django-widget-tweaks==1.4.3

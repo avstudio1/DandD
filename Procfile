@@ -1,0 +1,1 @@
+web: gunicorn dashtastic.wsgi --log-file -
