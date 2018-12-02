@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<nav class="navbar navbar-custom">
+  <h5 class="text-center">Player</h5>
+  {{ player_account.justin.account }}
+</nav>
+<table>
+  <thead>
+    Player Accounts: {{ player }}
+  </thead>
+  <th>COIN</th>
+  <tr>
+    {% for cointype, value in player_account.justin.account.items %}
+    <td>{{ cointype }}</td><td>{{ value }}</td>
+  </tr>
+  {% endfor %}
+  
+</table>
+
+{% endblock %}
