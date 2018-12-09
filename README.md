@@ -1,9 +1,12 @@
-# DandD: A playground application for learning how to code games like D & D.
+# DandD: A playground application for learning how to code games like Dungeons & Dragons.
+
+## Information
 
 This application started as a clone of the '[Getting Started with Python on Heroku](https://devcenter.heroku.com/articles/getting-started-with-python)'.
 
 Deployment to Heroku is supported. You will need to install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli), as well as [Postgres](https://devcenter.heroku.com/articles/heroku-postgresql#local-setup).
 
+This application essentially runs a Django framework with some coding in behind that allows for the creation of a simple gaming interface.
 
 ## Running Locally
 
