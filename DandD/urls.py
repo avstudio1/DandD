@@ -7,5 +7,5 @@ admin.autodiscover()
 urlpatterns = [
     path("", game.views.index, name="index"),
     path("economy/", game.views.economy, name="economy"),
-    path("economy/<str:player_code>/", game.views.player, name="player")
+    path("economy/<str:player_code>/", game.views.player, name="player"),
 ]

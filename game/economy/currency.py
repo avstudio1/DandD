@@ -9,10 +9,8 @@ coin_types = {'cp': 0,
                   'pp': 0
                   }
 
-
 ''' Define a container for holding game currencies.'''
-class purse:
-
+class Purse:
 
     ''' When a new purse is created, the coin type, weights
     and colors are created for that purse instance.  '''
@@ -33,13 +31,16 @@ class purse:
                       'pp': self.pp
                       }
 
+    def __str__(self):
+        return 'Purse(*{!r})'.format(self.account)
+
+    def __repr__(self):
+        return 'Purse: {!r}'.format(self.account)
+
     ''' Method to update the value of all held coins in purse
     whenever a transaction occurs. Use refreshPurse() to
     display the contents and weight of your purse. '''
     def refreshPurse(self):
-#        ackPurse = ''
-#        prevNumCoins = self.numCoins
-#        previousMass = self.mass
         self.numCoins = 0
         self.mass = 0
         
@@ -90,7 +91,7 @@ class purse:
 
 ''' Defines the types of coins available in game.
     Each coin has value, weight and color attributes. '''
-class coin:
+class Coin:
 
     ''' Each time a coin is created it contains the
         value and weight of the coin. '''    
@@ -98,6 +99,12 @@ class coin:
         self.coinType = coinType
         self.value = value
         self.weight = weight
+
+    def __repr__(self):
+        return 'Coin type {!r}: '.format(self.coinType) + '{!r}'.format(self.value)
+
+    def __str__(self):
+        return 'Coin(*{!r})'.format(self.coinType)
 
     ''' Method to add coins. '''
     def getP(self, otherP):
@@ -137,7 +144,8 @@ class coin:
         return exchTransaction
 
 ''' Specifies cp coin type = copper '''
-class cp(coin):
+class cp(Coin):
+
     def __init__(self, coinType="Copper", color="Reddish", weight=2, value=0):
         self.coinType = coinType
         self.color = color
@@ -146,7 +154,7 @@ class cp(coin):
         self.mass = 0
 
 ''' Specifies sp coin type = silver '''
-class sp(coin):
+class sp(Coin):
     def __init__(self, coinType="Silver", color="Scaly White", weight=5, value=0):
         self.coinType = coinType
         self.color = color
@@ -155,7 +163,7 @@ class sp(coin):
         self.mass = 0
 
 ''' Specifies ep coin type = electrum '''
-class ep(coin):
+class ep(Coin):
     def __init__(self, coinType="Electrum", color="Blueish", weight=3, value=0):
         self.coinType = coinType
         self.color = color
@@ -164,7 +172,7 @@ class ep(coin):
         self.mass = 0
 
 ''' Specifies gp coin type = gold '''
-class gp(coin):
+class gp(Coin):
     def __init__(self, coinType="Gold", color="Gold", weight=7, value=0):
         self.coinType = coinType
         self.color = color
@@ -173,7 +181,7 @@ class gp(coin):
         self.mass = 0
 
 ''' Specifies pp coin type = platinum '''
-class pp(coin):
+class pp(Coin):
     def __init__(self, coinType="Platinum", color="Brilliant White", weight=10, value=0):
         self.coinType = coinType
         self.color = color
@@ -183,7 +191,7 @@ class pp(coin):
 
 ''' Create a new purse with some coins '''
 def create_purse(purse_owner):
-    new_purse = purse()
+    new_purse = Purse()
     new_purse.cp.getP(100)
     new_purse.sp.getP(50)
     new_purse.ep.getP(20)

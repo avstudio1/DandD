@@ -8,14 +8,16 @@
 </nav>
 <table>
   <thead>
-    Player Accounts: {{ player }}
+    {{ player|title }}'s coins
   </thead>
-  <th>COIN</th>
   <tr>
-    {% for cointype, value in player_account.justin.account.items %}
-    <td>{{ cointype }}</td><td>{{ value }}</td>
+    {% for player, purse in player_account.items %}
+      {% for cointype, value in purse.account.items %}
+        <td>{{ cointype }}</td><td>{{ value }}</td>
   </tr>
+    {% endfor %}
   {% endfor %}
+</table>  
   
 </table>
 

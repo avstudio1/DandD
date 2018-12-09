@@ -5,12 +5,10 @@ from game.economy import currency
 def index(request):
     return render(request, "index.html")
 
+def economy(request):
+    return render(request, "economy.html", {})
+
 def player(request, player_code):
     player = player_code
     player_account = currency.create_purse(player)
     return render(request, "player.html", {'player': player, 'player_account': player_account})
-
-def economy(request, player):
-    purse_owner = player
-    purse = currency.create_purse(purse_owner)
-    return render(request, "economy.html", {'purse': purse})
